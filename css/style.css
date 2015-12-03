@@ -201,9 +201,6 @@ a {
 #navigation {
 	float: right;
 	text-transform: lowercase;
-}
-
-#navigation {
 	margin-top: 60px;
 }
 
@@ -255,17 +252,17 @@ a {
 
 /* BACKGROUND IMAGES FOR BLOCK "sources" */
 
-#src-items .left .src-item:first-child {background: url(../img/top-imga1.jpg);}
+#src-items .left .src-item:first-child {background: url(../img/src-left-img1.png), #f1f0f1;}
 
-#src-items .left .src-item:last-child {background: url(../img/top-imga2.jpg);}
+#src-items .left .src-item:last-child {background: url(../img/src-left-img2.png), #2e2d2d;}
 
-#src-items .center .src-item:first-child {background: url(../img/top-imgb1.jpg);}
+#src-items .center .src-item:first-child {background: url(../img/src-center-img1.png), #2e2d2d;}
 
-#src-items .center .src-item:last-child {background: url(../img/top-imgb2.jpg);}
+#src-items .center .src-item:last-child {background: url(../img/src-center-img2.png), #f1f0f1;}
 
-#src-items .right .src-item:first-child {background: url(../img/top-imgc1.jpg);}
+#src-items .right .src-item:first-child {background: url(../img/src-right-img1.png), #f1f0f1;}
 
-#src-items .right .src-item:last-child {background: url(../img/top-imgc2.jpg);}
+#src-items .right .src-item:last-child {background: url(../img/src-right-img2.png), #2e2d2d;}
 
 /* END BACKGROUND IMAGES */
 
@@ -282,7 +279,7 @@ a {
 	margin-left: 30px;
 }
 
-.mm-img {
+.step-round {
 	height: 120px;
 	width: 120px;
 	border: 1px solid #9b9b9b;
@@ -349,13 +346,34 @@ a {
 .add-button {
 	width: 35px;
 	height: 35px;
-	background: url(../img/add-icon.png) no-repeat center, #2e2d2d;
+	background: #2e2d2d;
 	float: right;
 	margin-top: 30px;
+	padding-left: 11px;
+	padding-top: 7px;
+	font: bold 24px/20px 'Open Sans', sans-serif;
+	color: #fff;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-transition: .1s;
+	-moz-transition: .1s;
+	-o-transition: .1s;
+	transition: .1s;
+}
+
+.add-button:hover {
+	color: #aeceae;
 }
 
 .add-button:active {
-	box-shadow: inset 0 0 10px rgba(0,0,0,1);
+	-webkit-box-shadow: inset 0 0 20px #000;
+	-moz-box-shadow: inset 0 0 20px #000;
+	-o-box-shadow: inset 0 0 20px #000;
+	box-shadow: inset 0 0 20px #000;
 }
 
 #info {
