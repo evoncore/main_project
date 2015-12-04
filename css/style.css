@@ -627,6 +627,7 @@ input:focus {
 	background: #fdfdfd;
 	outline: none;
 	resize: none;
+	overflow: hidden; /* for IE */
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
