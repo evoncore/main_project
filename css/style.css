@@ -15,8 +15,6 @@ font-weight: normal;
 src: local('Bebas Neue Bold'), url('../fonts/BEBASNEUE BOLD.woff') format('woff');
 }
 
-/*=== END FONTS ===*/
-
 /*=== TYPOGRAPHY GRID ===*/
 
 body {
@@ -65,11 +63,9 @@ a {
 
 ::selection {background: #dedede;}
 
-/*=== END TYPOGRAPHY GRID ===*/
-
 /*=== CUSTOM GRID ===*/
 
-.clearfix {content: ''; display: block; clear: both;}
+.clearfix:after {content: ''; display: block; clear: both;}
 
 .container {width: 1170px; margin: 0 auto;}
 
@@ -110,8 +106,6 @@ a {
 input:focus {
 	outline: none;
 }
-
-/*=== END CUSTOM GRID ===*/
 
 /*=== HEADER ===*/
 
@@ -185,8 +179,6 @@ input:focus {
 	color: #aeceae;
 }
 
-/*=== END HEADER ===*/
-
 /*=== PAGE "HOME" ===*/
 
 #sources {
@@ -202,15 +194,20 @@ input:focus {
 
 .src-item h1 {
 	text-align: center;
-	padding-top: 125px;
+	margin: 0px auto;
+	padding-top: 115px;
+	padding-bottom: 15px;
+	border-bottom: 1px dashed #fff;
+	width: 189.5px;
 }
 
 .src-item a {
 	font: 20px/48px 'Economica', sans-serif;
 	color: #fff;
-	margin: 15px 170px;
+	margin-top: 5px;
 	display: block;
 	text-transform: lowercase;
+	text-align: center;
 }
 
 #src-items .col {
@@ -219,17 +216,36 @@ input:focus {
 
 /* BACKGROUND IMAGES FOR BLOCK "sources" */
 
-#src-items .left .src-item:first-child {background: url(../img/src-left-img1.png), #f1f0f1;}
+#src-items .left .src-item:last-child {background-color: #88C695}
 
-#src-items .left .src-item:last-child {background: url(../img/src-left-img2.png), #2e2d2d;}
+.src-icon-1 {
+	width: 57px;
+	height: 66px;
+	background: url(../img/sprites.png) no-repeat -5px -5px;
+	float: left;
+	margin: 35px 0 0 158.5px;
+}
 
-#src-items .center .src-item:first-child {background: url(../img/src-center-img1.png), #2e2d2d;}
+#src-items .center .src-item:first-child {background: #7AC4CF;}
 
-#src-items .center .src-item:last-child {background: url(../img/src-center-img2.png), #f1f0f1;}
+.src-icon-2 {
+	width: 70px;
+	height: 57px;;
+	background: url(../img/sprites.png) no-repeat -72px -5px;
+	float: left;
+	margin: 35px 0 0 150.5px;
+}
 
-#src-items .right .src-item:first-child {background: url(../img/src-right-img1.png), #f1f0f1;}
+#src-items .right .src-item:last-child {background: #F4C87D;}
 
-#src-items .right .src-item:last-child {background: url(../img/src-right-img2.png), #2e2d2d;}
+.src-icon-3 {
+	width: 56px;
+	height: 64px;
+	background: url(../img/sprites.png) no-repeat -152px -5px;
+	float: left;
+	margin: 35px 0 0 159px;
+}
+
 
 /* END BACKGROUND IMAGES */
 
@@ -446,9 +462,6 @@ input:focus {
 	font: bold 30px/48px 'Economica', sans-serif;
 }
 
-/*=== END PAGE "HOME" ===*/
-
-
 /*=== PAGE "MENU" ===*/
 
 #menu h5 {
@@ -466,8 +479,6 @@ input:focus {
 .menu-text {
 	margin: 25px;
 }
-
-/*=== END PAGE "MENU" ===*/
 
 /*=== PAGE "RESERVATION" ===*/
 
@@ -625,8 +636,6 @@ input:focus {
 	border: 1px solid #2e2d2d;
 }
 
-/*=== END "RESERVATION" ===*/
-
 /*=== PAGE "BLOG" ===*/
 
 #blog h3 {
@@ -765,8 +774,6 @@ input:focus {
 
 /* end table styles */
 
-/*=== END PAGE "BLOG" ===*/
-
 /*=== PAGE "CONTACTS" ===*/
 
 #contacts h2 {
@@ -863,8 +870,6 @@ input:focus {
 	margin-right: 15px;
 }
 
-/*=== END PAGE "CONTACTS" ===*/
-
 /*=== FOOTER ===*/
 
 #footer {
@@ -941,8 +946,6 @@ input:focus {
 	z-index: 1;
 }
 
-/*=== END FOOTER ===*/
-
 /*=== ADAPTIVE ANCHOR ===*/
 
 @media screen and (max-width: 1540px) {
@@ -977,5 +980,3 @@ input:focus {
 	}
 
 }
-
-/*=== END ADAPTIVE ANCHOR ===*/
