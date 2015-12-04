@@ -27,10 +27,10 @@ src: local('Bebas Neue Bold'), url('../fonts/BEBASNEUE BOLD.woff') format('woff'
 5) Подобавлять ко всем путям изображений в HTML './' - не нужно
 6) Сделать нормально иконку-ссылку в нижем меню (стрелочка) +
 7) Сделать перенос строки для цифр в нижнем центральном меню (black box) - padding +
-8) Пересохранить все изображения в PNG в черезстрочном формате
+8) Пересохранить все изображения в PNG в черезстрочном формате +
 9) Сделать нормальный скелет header, section, footer - пока не нужно
 10) Убрать высоту у страниц +
-11) Изменить описание плиток в разделе menu !important
+11) Изменить описание плиток в разделе menu +
 12) Сделать якорь (arrow) адаптивным
 13) Почти полностью переверстать первую страницу +
 14) Сделать сетку +-
@@ -94,9 +94,7 @@ a {
 	text-decoration: none;
 }
 
-::selection {
-	background: #dedede;
-}
+::selection {background: #dedede;}
 
 /*=== END TYPOGRAPHY GRID ===*/
 
@@ -138,6 +136,10 @@ a {
 	color: #fff;
 	background: #2e2d2d;
 	border: 1px solid #2e2d2d;
+}
+
+input:focus {
+	outline: none;
 }
 
 /*=== END CUSTOM GRID ===*/
@@ -504,73 +506,64 @@ a {
 
 /*=== PAGE "RESERVATION" ===*/
 
-#left-column {
-	position: relative;
-	bottom: 45px;
-}
-
-#left-column img {
-	float: left;
-}
-
 #reservation h2 {
-	margin-top: 45px;
 	margin-bottom: 20px;
+	margin-top: 40px;
 }
 
-#reservation h5 {
-	margin-bottom: 20px;
-}
-
-.text-a {
-	padding-left: 30px;
-	width: 360px;
+#left__column {
+	margin-bottom: 45px;
+	width: 780px;
 	float: left;
 }
 
-.text-b {
+#left__column img {
+	float: left;
+	padding-right: 30px;
+}
+
+.content-a {
 	width: 770px;
 	float: left;
 }
 
-#right-column {
-	width: 365px;
-	float: right;
-	margin-bottom: 45px;
-}
-
-#right-column select {
-	float: right;
-	margin-left: 20px;
-	height: 30px;
-	width: 95px;
-	margin-top: 15px;
-	border: 1px solid #f1f1f1;
-	font: 14px/27px 'Open Sans', sans-serif;
-	background: #fdfdfd;
-	color: #737272;
-	outline: none;
-	display: inline-block;
-}
-
-#right-column option {
-	width: 55px;
-	text-align: center;
-}
-
-#right-column #left_selection {
-	min-width: 150px;
-	height: 30px;
+.content-b {
+	width: 770px;
 	float: left;
 }
 
-#right-column #right_selection {
-	min-width: 150px;
-	height: 30px;
+.content-b .button {
+	margin: 0;
+}
+
+#reservation h5,
+.content-a p,
+.content-b p {
+	margin-bottom: 20px;
+}
+
+#right__column {
+	width: 365px;
+	float: right;
+	margin-bottom: 45px;
 	float: right;
 }
 
-input {
+.input-contacts {
+	font: 16px/20px 'Open Sans', sans-serif;
+	color: #727171;
+	margin-bottom: 30px;
+	width: 90%;
+}
+
+#right__column span {
+	float: left;
+	margin-top: 17px;
+	font: 14px/27px 'Open Sans', sans-serif;
+	color: #535151;
+}
+
+#right__column input {
 	margin-top: 15px;
 	height: 30px;
 	width: 365px;
@@ -586,31 +579,55 @@ input {
 	box-sizing: border-box;
 }
 
-input:focus {
-	outline: none;
-}
-
-.cal-input {
-	background: url(../img/cal-icon-menu.png) no-repeat 240px 2px, #fdfdfd;
-} 
-
-.short-input {
+#right__column .short-input {
 	width: 280px;
 	float: right;
 }
 
-#right-column .button {
-	float: right;
-	margin-left: 15px;
+#right__column .calendar-icon {
+	background: url(../img/calendar-icon.png) no-repeat 92%, #fdfdfd;
 }
 
-#right-column textarea {
+#right__column select {
+	margin-left: 20px;
+	height: 30px;
+	width: 95px;
+	margin-top: 15px;
+	border: 1px solid #f1f1f1;
+	font: 14px/27px 'Open Sans', sans-serif;
+	outline: none;
+	color: #737272;
+	background: url(../img/toggle-icon.png) 96% no-repeat, #fdfdfd;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+#right__column select::-ms-expand { /* for IE 11 */
+	display: none;
+}
+
+#right__column #left__selection {
+	min-width: 150px;
+	height: 30px;
+	float: left;
+}
+
+#right__column #right__selection {
+	min-width: 150px;
+	height: 30px;
+	float: right;
+}
+
+#right__column textarea {
 	height: 140px;
 	width: 365px;
 	margin-top: 65px;
 	padding-left: 10px;
 	font: 14px/27px 'Open Sans', sans-serif;
 	border: 1px solid #f1f1f1;
+	background: #fdfdfd;
 	outline: none;
 	resize: none;
 
@@ -620,18 +637,26 @@ input:focus {
 	box-sizing: border-box;
 }
 
-#right-column span {
-	float: left;
-	margin-top: 17px;
-	font: 14px/27px 'Open Sans', sans-serif;
-	color: #535151;
+#right__column .button {
+	float: right;
+	margin-left: 15px;
 }
 
-.input-contacts {
-	font: 16px/20px 'Open Sans', sans-serif;
-	color: #727171;
-	margin-bottom: 45px;
-	width: 90%;
+#right__column form .button {
+	border: 1px solid #9b9b9b;
+	font: bold 20px/48px 'Economica', sans-serif;
+	margin-top: 30px;
+	width: 97px;
+	height: 36px;
+	color: #969696;
+	line-height: 32px;
+	background: #fff;
+}
+
+#right__column form .button:hover {
+	color: #fff;
+	background: #2e2d2d;
+	border: 1px solid #2e2d2d;
 }
 
 /*=== END "RESERVATION" ===*/
@@ -835,8 +860,6 @@ td:last-child {
 #footer {
 	background: #adacac;
 	height: 140px;
-	position: relative;
-	bottom: 0;
 }
 
 #copyright b {
@@ -846,12 +869,13 @@ td:last-child {
 #copyright p {
 	padding-top: 50px;
 	color: #e2e2e2;
-	position: relative;
 }
 
 #copyright a {
 	font: 14px 'Open Sans', sans-serif;
 	color: #e2e2e2;
+	position: relative;
+	top: 5px;
 }
 
 #social a {
@@ -866,11 +890,6 @@ td:last-child {
 	margin-left: 16px;
 	position: relative;
 	top: -45px;
-}
-
-#social i {
-	color: #fff;
-	font-size: 24px;
 }
 
 #social {
