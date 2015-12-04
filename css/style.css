@@ -219,31 +219,31 @@ input:focus {
 #src-items .left .src-item:last-child {background-color: #88C695}
 
 .src-icon-1 {
-	width: 57px;
+	width: 73px;
 	height: 66px;
-	background: url(../img/sprites.png) no-repeat -5px -5px;
+	background: url(../img/sprites.png) no-repeat 6px -5px;
 	float: left;
-	margin: 35px 0 0 158.5px;
+	margin: 35px 0 0 150px;
 }
 
 #src-items .center .src-item:first-child {background: #7AC4CF;}
 
 .src-icon-2 {
-	width: 70px;
-	height: 57px;;
-	background: url(../img/sprites.png) no-repeat -72px -5px;
+	width: 73px;
+	height: 66px;
+	background: url(../img/sprites.png) no-repeat -70px -5px;
 	float: left;
-	margin: 35px 0 0 150.5px;
+	margin: 35px 0 0 150px;
 }
 
 #src-items .right .src-item:last-child {background: #F4C87D;}
 
 .src-icon-3 {
-	width: 56px;
-	height: 64px;
-	background: url(../img/sprites.png) no-repeat -152px -5px;
+	width: 73px;
+	height: 66px;
+	background: url(../img/sprites.png) no-repeat -143px -5px;
 	float: left;
-	margin: 35px 0 0 159px;
+	margin: 35px 0 0 150px;
 }
 
 
