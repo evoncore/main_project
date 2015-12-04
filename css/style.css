@@ -21,7 +21,7 @@ src: local('Bebas Neue Bold'), url('../fonts/BEBASNEUE BOLD.woff') format('woff'
 /* Задачи:
 
 1) Сделать типографию + ссылке в топовых постах +
-2) Оптимизировать код: прописать префиксы, поудалять ненужные параметры
+2) Оптимизировать код: прописать префиксы, поудалять ненужные параметры +
 3) Пофиксить нижний блок после картинок: добавить иконку к ссылке "more testimonials" +
 4) Решить что-то со шрифтами +
 5) Подобавлять ко всем путям изображений в HTML './' - не нужно
@@ -31,7 +31,7 @@ src: local('Bebas Neue Bold'), url('../fonts/BEBASNEUE BOLD.woff') format('woff'
 9) Сделать нормальный скелет header, section, footer - пока не нужно
 10) Убрать высоту у страниц +
 11) Изменить описание плиток в разделе menu +
-12) Сделать якорь (arrow) адаптивным
+12) Сделать якорь (arrow) адаптивным +
 13) Почти полностью переверстать первую страницу +
 14) Сделать сетку +-
 15) Исправить transition во всех hover +
@@ -146,10 +146,6 @@ input:focus {
 /*=== END CUSTOM GRID ===*/
 
 /*=== HEADER ===*/
-
-.wrapper {
-	height: 100%;
-}
 
 #header {
 	background: #f1f0f1;
@@ -302,7 +298,7 @@ input:focus {
 #posts {
 	min-height: 335px;
 	background: #f1f0f1;
-	overflow: auto;
+	overflow: hidden;
 	margin-top: 35px;
 }
 
@@ -737,7 +733,7 @@ input:focus {
 .posts-item {
 	min-height: 125px;
 	width: 365px;
-	overflow: auto;
+	overflow: hidden;
 }
 
 .posts-item p, h6 {
@@ -804,22 +800,27 @@ input:focus {
 
 /*=== PAGE "CONTACTS" ===*/
 
-#contacts {
-	margin-top: 45px;
-	min-height: 610px;
-	margin-bottom: 45px;
-}
-
 #contacts h2 {
 	margin-bottom: 10px;
 }
 
-#contacts iframe {
+#contacts-map {
+	margin-bottom: 45px;
+	width: 870px;
+	min-height: 445px;
 	float: left;
 }
-#contacts_page p {
+
+#contacts-map p {
 	float: left;
 	width: 850px;
+	margin-top: 20px;
+}
+
+#rightbar-contacts {
+	float: right;
+	margin-bottom: 20px;
+	margin-right: 10px;
 }
 
 .contacts_sidebar {
@@ -838,12 +839,16 @@ input:focus {
 	color: #636262;
 }
 
-#contact_form {
+#contact-form {
 	height: 600px;
 	background: #f1f0f1;
 }
 
-#contact_form .input_text {
+#contact-form h2 {
+	padding-top: 45px;
+}
+
+#contact-form .input_text {
 	padding-left: 30px;
 	margin-top: 20px;
 	margin-right: 30px;
@@ -853,19 +858,11 @@ input:focus {
 	background: #faf9fa;
 }
 
-#contact_form .button {
-	float: right;
-}
-
-#contact_form .button:last-child {
-	margin-right: 15px;
-}
-
-#contact_form form {
+#contact-form form {
 	width: 1070px;
 }
 
-#contact_form textarea {
+#contact-form textarea {
 	width: 1070px;
 	height: 305px;
 	margin-top: 20px;
@@ -881,6 +878,20 @@ input:focus {
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+#contact-form .button {
+	float: right;
+	background: transparent;
+	margin-top: 25px;
+}
+
+#contact-form .button:hover {
+	background: #2e2d2d;
+}
+
+#contact-form .button:last-child {
+	margin-right: 15px;
 }
 
 /*=== END PAGE "CONTACTS" ===*/
@@ -954,10 +965,48 @@ input:focus {
 	color: #fff;
 }
 
-#anchor { /******** NEED FIX (if we remove this item - we will be big padding. its need to fix )********/
+#anchor {
 	position: fixed;
 	right: 200px;
-	bottom: 120px;
+	bottom: 150px;
+	z-index: 1;
 }
 
 /*=== END FOOTER ===*/
+
+/*=== ADAPTIVE ANCHOR ===*/
+
+@media screen and (max-width: 1540px) {
+
+	#anchor {
+		position: fixed;
+		right: 56px;
+		bottom: 150px;
+		z-index: 1;
+	}
+
+	#anchor img {
+		height: 80%;
+		width: 80%;
+	}
+
+
+}
+
+@media screen and (max-width: 1280px)  {
+
+	#anchor {
+		position: fixed;
+		right: -6px;
+		bottom: 150px;
+		z-index: 1;
+	}
+
+	#anchor img {
+		height: 60%;
+		width: 60%;
+	}
+
+}
+
+/*=== END ADAPTIVE ANCHOR ===*/
