@@ -1,12 +1,9 @@
 /*=== FONTS ===*/
 
-@import url(https://fonts.googleapis.com/css?family=Economica:400,700);
 /* font-family: 'Economica' */
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 /* font-family: 'Open Sans'; */
 
-@import url(https://fonts.googleapis.com/css?family=Dosis:500);
 /* font-family: 'Dosis', sans-serif; */
 
 @font-face {
@@ -45,7 +42,6 @@ a:before {
 20) Сделать иконки футера :after {
 	content: 'unicode';
 } +
-
 
 */
 
