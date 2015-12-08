@@ -221,7 +221,7 @@ input:focus {
 .src-icon-1 {
 	width: 73px;
 	height: 66px;
-	background: url(../img/sprites.png) no-repeat 6px -5px;
+	background: url(../img/sprites.png) no-repeat 5.5px -5px;
 	float: left;
 	margin: 35px 0 0 150px;
 }
@@ -231,7 +231,7 @@ input:focus {
 .src-icon-2 {
 	width: 73px;
 	height: 66px;
-	background: url(../img/sprites.png) no-repeat -70px -5px;
+	background: url(../img/sprites.png) no-repeat -71px -5px;
 	float: left;
 	margin: 35px 0 0 150px;
 }
@@ -877,6 +877,8 @@ input:focus {
 	height: 140px;
 }
 
+#footer .container {height: 0;} /* fix phantom height */
+
 #copyright b {
 	font: lighter 18px/18px 'Open Sans', sans-serif;
 }
@@ -903,12 +905,12 @@ input:focus {
 	float: left;
 	text-align: center;
 	margin-left: 16px;
-	position: relative;
-	top: -45px;
 }
 
 #social {
 	float: right;
+	position: relative;
+	top: -45px;
 }
 
 #twitter:before {
@@ -944,6 +946,10 @@ input:focus {
 	right: 200px;
 	bottom: 150px;
 	z-index: 1;
+}
+
+#anchor:hover {
+	cursor: pointer;
 }
 
 /*=== ADAPTIVE ANCHOR ===*/
